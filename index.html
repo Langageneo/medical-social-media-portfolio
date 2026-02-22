@@ -1,137 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Parfait Guiri | Social Media & Automation Strategist</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parfait Guiri | Social Media & Automation Strategist</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f7f7f7;
-            color: #111;
-        }
+<style>
+/* ===== GLOBAL STYLES ===== */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f7f7;
+    color: #111;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
 
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: auto;
-        }
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 0;
+}
 
-        .hero {
-            padding: 80px 0;
-            background: #ffffff;
-            border-bottom: 1px solid #e5e5e5;
-        }
+section {
+    padding: 60px 0;
+}
 
-        .hero-content {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-        }
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
 
-        .profile-image img {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid #ddd;
-        }
+/* ===== HERO ===== */
+.hero {
+    padding: 80px 0;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+}
 
-        .hero-text h1 {
-            margin: 0;
-            font-size: 34px;
-            font-weight: 600;
-        }
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    animation: fadeInUp 1s ease forwards;
+}
 
-        .hero-text p {
-            margin-top: 10px;
-            color: #666;
-            font-size: 16px;
-        }
+.profile-image img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    transition: transform 0.3s ease;
+}
 
-        section {
-            padding: 60px 0;
-        }
+.profile-image img:hover {
+    transform: scale(1.05);
+}
 
-        h2 {
-            font-size: 22px;
-            margin-bottom: 20px;
-        }
+.hero-text h1 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 600;
+}
 
-        .card {
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 6px;
-            border: 1px solid #e5e5e5;
-            margin-bottom: 20px;
-        }
+.hero-text p {
+    margin-top: 10px;
+    color: #666;
+    font-size: 16px;
+}
 
-        footer {
-            padding: 40px 0;
-            text-align: center;
-            font-size: 14px;
-            color: #777;
-        }
+/* ===== CARD ===== */
+.card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 6px;
+    border: 1px solid #e5e5e5;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
 
-        @media (max-width: 768px) {
-            .hero-content {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
-    </style>
+.card:nth-child(1) { animation-delay: 0.2s; }
+.card:nth-child(2) { animation-delay: 0.4s; }
+.card:nth-child(3) { animation-delay: 0.6s; }
+.card:nth-child(4) { animation-delay: 0.8s; }
+
+/* ===== FOOTER ===== */
+footer {
+    padding: 40px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    background: #111;
+}
+
+/* ===== MEDIA ===== */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="container hero-content">
-            
-            <div class="profile-image">
-                <img src="neoassets/neo.png" alt="Parfait Guiri Profile Photo">
-            </div>
-
-            <div class="hero-text">
-                <h1>Parfait Guiri</h1>
-                <p>Social Media Strategist • Automation Specialist • AI-Driven Content Systems</p>
-            </div>
-
+<!-- HERO -->
+<section class="hero">
+    <div class="container hero-content">
+        <div class="profile-image">
+            <img src="neoassets/neo.png" alt="Parfait Guiri Profile Photo">
         </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section>
-        <div class="container">
-            <h2>About</h2>
-            <div class="card">
-                <p>
-                    Strategic Social Media & Automation Specialist focused on building structured content systems 
-                    for premium and regulated environments. Experienced in AI-assisted workflows, performance 
-                    optimization, and scalable digital operations.
-                </p>
-            </div>
+        <div class="hero-text">
+            <h1>Parfait Guiri</h1>
+            <p>Social Media Strategist • Automation Specialist • AI-Driven Content Systems</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- EXPERTISE -->
-    <section>
-        <div class="container">
-            <h2>Core Expertise</h2>
-            <div class="card">
-                <ul>
-                    <li>Structured Content Systems</li>
-                    <li>AI-Assisted Content Creation</li>
-                    <li>Automation (n8n, API workflows)</li>
-                    <li>Performance Optimization</li>
-                    <li>DevOps & System Structuring</li>
-                </ul>
-            </div>
+<!-- ABOUT -->
+<section>
+    <div class="container">
+        <h2>About</h2>
+        <div class="card">
+            <p>
+                Strategic Social Media & Automation Specialist focused on building structured content systems 
+                for premium and regulated environments. Experienced in AI-assisted workflows, performance 
+                optimization, and scalable digital operations.
+            </p>
         </div>
-    </section>
-<!-- MEASURED IMPED -->
+    </div>
+</section>
+
+<!-- CORE EXPERTISE -->
+<section>
+    <div class="container">
+        <h2>Core Expertise</h2>
+        <div class="card">
+            <ul>
+                <li>Structured Content Systems</li>
+                <li>AI-Assisted Content Creation</li>
+                <li>Automation (n8n, API workflows)</li>
+                <li>Performance Optimization</li>
+                <li>DevOps & System Structuring</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- EXECUTIVE CAPABILITIES -->
+<section>
+    <div class="container">
+        <h2>Executive Capabilities</h2>
+        <div class="card">
+            <ul>
+                <li>Structured Digital Governance</li>
+                <li>AI Integration in Regulated Environments</li>
+                <li>Scalable Content Operations Architecture</li>
+                <li>Performance Reporting for Executive Leadership</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- AUTOMATION WORKFLOW -->
+<section>
+    <div class="container">
+        <h2>Automation Workflow</h2>
+        <div class="card">
+            <p>
+                Google Sheets → n8n Automation → AI Content Generation → Review Layer → 
+                Scheduled Publishing → Performance Tracking Dashboard
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- MEASURED IMPACT -->
 <section>
     <div class="container">
         <h2>Measured Impact</h2>
@@ -145,21 +206,22 @@
             </ul>
         </div>
     </div>
-    </section>
-    <!-- CONTACT -->
-    <section>
-        <div class="container">
-            <h2>Contact</h2>
-            <div class="card">
-                <p><strong>Email:</strong> parfaitguiri@email.com</p>
-                <p><strong>Phone:</strong> 05 55 70 94 75</p>
-            </div>
-        </div>
-    </section>
+</section>
 
-    <footer>
-        © 2026 Parfait Guiri — Structured. Strategic. Scalable.
-    </footer>
+<!-- CONTACT -->
+<section>
+    <div class="container">
+        <h2>Contact</h2>
+        <div class="card">
+            <p><strong>Email:</strong> your@email.com</p>
+            <p><strong>Phone:</strong> 05 55 70 94 75</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 Parfait Guiri — Structured. Strategic. Scalable.
+</footer>
 
 </body>
-    </html>
+    </html> 
